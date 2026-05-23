@@ -1,32 +1,20 @@
 version: '3.8'
 
 services:
-  api:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: speedrunteam-api
+    container_name: speedrunteam-app
     restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    networks:
-      - app-network
+      - PORT=3000
+    volumes:
+      # Optional: persist database file outside the container
+      - db-data:/app/database
 
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: speedrunteam-frontend
-    restart: unless-stopped
-    ports:
-      - "80:80"
-    depends_on:
-      - api
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+volumes:
+  db-data:

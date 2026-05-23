@@ -1,34 +1,58 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
-    <section style={{
+    <section className="glass-panel fade-in" style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '60vh',
-      background: 'linear-gradient(135deg, rgba(78,84,200,0.15), rgba(143,148,251,0.15))',
-      borderRadius: '1rem',
-      padding: '2rem',
-      backdropFilter: 'blur(12px)'
+      minHeight: '55vh',
+      padding: '3rem',
+      textAlign: 'center'
     }}>
-      <h1 style={{
-        fontFamily: '"Inter", sans-serif',
-        fontSize: '2.5rem',
-        color: '#4e54c8',
+      <div style={{
+        fontSize: '4.5rem',
         marginBottom: '1rem',
-        textShadow: '0 2px 4px rgba(0,0,0,0.1)'
-      }}>Добро пожаловать в SpeedrunTeam</h1>
-      <p style={{
-        fontSize: '1.2rem',
-        color: '#555',
-        maxWidth: '600px',
-        textAlign: 'center',
-        lineHeight: '1.6'
+        animation: 'float 6s ease-in-out infinite',
+        background: 'linear-gradient(135deg, #a5b4fc, #f472b6, #2dd4bf)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
       }}>
-        Платформа для управления командами скоростных забегов. Здесь вы сможете создавать команды, управлять участниками, отслеживать результаты и планировать предстоящие мероприятия.
+        ⚡
+      </div>
+      
+      <h1 style={{
+        fontSize: '3rem',
+        fontWeight: 800,
+        marginBottom: '1.5rem',
+        background: 'linear-gradient(135deg, #fff 40%, #a5b4fc 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        letterSpacing: '-1px'
+      }}>
+        Добро пожаловать в SpeedrunTeam
+      </h1>
+      
+      <p style={{
+        fontSize: '1.25rem',
+        color: 'var(--text-secondary)',
+        maxWidth: '650px',
+        lineHeight: '1.7',
+        marginBottom: '2.5rem'
+      }}>
+        Профессиональная экосистема для планирования скоростных забегов, координации команд и отслеживания мировых рекордов. Создавайте команды и регистрируйте лучшие результаты в режиме реального времени!
       </p>
+
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <Link to="/teams" className="btn btn-primary" style={{ fontSize: '1.05rem', padding: '0.9rem 2rem' }}>
+          👥 Начать работу с командами
+        </Link>
+        <Link to="/runs" className="btn btn-secondary" style={{ fontSize: '1.05rem', padding: '0.9rem 2rem' }}>
+          ⏱️ Просмотр забегов
+        </Link>
+      </div>
     </section>
   );
 };
