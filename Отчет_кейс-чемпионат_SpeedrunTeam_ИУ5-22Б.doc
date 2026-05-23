@@ -1,0 +1,321 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8">
+  <title>Отчет по кейс-чемпионату SpeedrunTeam</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2cm 1cm 2cm 3cm; /* GOST standard margins: top 2cm, right 1cm, bottom 2cm, left 3cm */
+    }
+    body {
+      font-family: "Times New Roman", serif;
+      font-size: 14pt;
+      line-height: 1.5;
+      color: #000000;
+      text-align: justify;
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 24pt;
+      margin-bottom: 12pt;
+      page-break-after: avoid;
+    }
+    h2 {
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: left;
+      margin-top: 18pt;
+      margin-bottom: 6pt;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 14pt;
+      font-weight: bold;
+      font-style: italic;
+      text-align: left;
+      margin-top: 12pt;
+      margin-bottom: 6pt;
+      page-break-after: avoid;
+    }
+    p {
+      text-indent: 1.25cm; /* standard paragraph indentation */
+      margin: 0 0 12pt 0;
+    }
+    .title-center {
+      text-align: center;
+      text-indent: 0;
+      margin-bottom: 6pt;
+    }
+    .title-right {
+      text-align: right;
+      text-indent: 0;
+      margin-left: 50%;
+      margin-top: 36pt;
+      margin-bottom: 6pt;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12pt 0;
+      font-size: 12pt;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    pre {
+      font-family: "Courier New", monospace;
+      font-size: 10pt;
+      background-color: #f5f5f5;
+      border: 1px solid #cccccc;
+      padding: 10px;
+      margin: 12pt 0;
+      white-space: pre-wrap;
+      text-indent: 0;
+    }
+    code {
+      font-family: "Courier New", monospace;
+      font-size: 11pt;
+      background-color: #f5f5f5;
+      padding: 2px 4px;
+    }
+    ul, ol {
+      margin-bottom: 12pt;
+      padding-left: 24pt;
+    }
+    li {
+      margin-bottom: 6pt;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TITLE PAGE -->
+  <div class="title-center" style="font-size: 12pt; font-weight: bold;">
+    МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ<br>
+    ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ<br>
+    ВЫСШЕГО ОБРАЗОВАНИЯ<br>
+    «МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ<br>
+    имени Н.Э. БАУМАНА<br>
+    (национальный исследовательский университет)»<br>
+    (МГТУ им. Н.Э. Баумана)
+  </div>
+
+  <hr style="border: 1px solid #000000; margin: 12pt 0;">
+
+  <div class="title-center" style="font-size: 12pt; font-weight: bold;">
+    ФАКУЛЬТЕТ «ИНФОРМАТИКА И СИСТЕМЫ УПРАВЛЕНИЯ» (ИУ)<br>
+    КАФЕДРА «ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ТЕЛЕКОММУНИКАЦИИ» (ИУ5)
+  </div>
+
+  <div style="height: 100px;"></div>
+
+  <div class="title-center">
+    <span style="font-size: 24pt; font-weight: bold;">ОТЧЕТ</span><br>
+    <span style="font-size: 16pt; font-weight: bold;">по кейс-чемпионату</span><br>
+    <span style="font-size: 20pt; font-weight: bold; color: #4f46e5;">«SpeedrunTeam»</span><br>
+    <span style="font-size: 14pt; font-style: italic;">по теме: «Разработка веб-приложения SpeedrunTeam для координации скоростных забегов»</span>
+  </div>
+
+  <div style="height: 120px;"></div>
+
+  <div class="title-right">
+    <p style="text-indent: 0; margin-bottom: 4px;"><strong>Выполнил:</strong></p>
+    <p style="text-indent: 0; margin-bottom: 12px;">Студент группы <strong>ИУ5-22Б</strong><br><strong>Колесников С.А.</strong></p>
+    <p style="text-indent: 0; margin-bottom: 4px;"><strong>Руководитель проекта:</strong></p>
+    <p style="text-indent: 0; margin-bottom: 0;"><strong>Чертилина А. А.</strong></p>
+  </div>
+
+  <div style="height: 100px;"></div>
+
+  <div class="title-center" style="font-size: 12pt; font-weight: bold;">
+    Москва, 2026 г.
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-break"></div>
+
+  <h1>1. Введение</h1>
+  <p>В современных условиях бурного развития индустрии киберспорта и гейминга, скоростное прохождение игр (спидраннинг) переросло из хобби в профессиональную дисциплину. Эффективная координация команд, фиксация результатов и отслеживание достижений требуют специализированных и отказоустойчивых веб-инструментов.</p>
+  <p>Целью данного проекта в рамках кейс-чемпионата <strong>«SpeedrunTeam»</strong> является разработка полнофункционального, высокопроизводительного и визуально привлекательного веб-приложения <strong>SpeedrunTeam</strong>. Программа позволяет автоматизировать учет игровых команд, регистрировать время прохождения игр с точностью до миллисекунд, осуществлять полный жизненный цикл данных (CRUD) и предоставлять пользователям интерактивный опыт взаимодействия на основе современных практик веб-дизайна.</p>
+
+  <h1>2. Постановка задачи</h1>
+  <p>В соответствии с техническими требованиями кейс-чемпионата, система должна реализовывать следующий функционал:</p>
+  <ol>
+    <li><strong>База данных:</strong> Организация реляционного хранилища для учета команд спидраннеров и записей их результатов с поддержкой связей и каскадного удаления зависимостей.</li>
+    <li><strong>Бэкенд:</strong> Разработка REST API на платформе Node.js для выполнения CRUD-операций над командами и забегами.</li>
+    <li><strong>Фронтенд:</strong> Создание адаптивного пользовательского интерфейса (Single Page Application) на React + TypeScript для управления сущностями.</li>
+    <li><strong>Контейнеризация:</strong> Создание конфигурации Docker для быстрого деплоя всей системы.</li>
+    <li><strong>Качество кода:</strong> Написание модульных тестов, интеграция линтеров кода (Prettier) и настройка автотестирования (CI/CD).</li>
+  </ol>
+
+  <h1>3. Архитектура и системное проектирование</h1>
+  <p>Система построена по классической клиент-серверной архитектуре. Бэкенд на Node.js / Express отвечает за маршрутизацию и предоставление REST API-эндпоинтов, в то время как фронтенд представляет собой Single Page Application (SPA), собранный с помощью Vite.</p>
+
+  <h2>3.1 Схема и структура базы данных</h2>
+  <p>Для обеспечения кроссплатформенности базы данных без необходимости компиляции локальных бинарников используется база данных SQLite, скомпилированная в WebAssembly (библиотека <code>sql.js</code>). База данных хранит свои данные в бинарном файле <code>data.db</code> в корне проекта.</p>
+  <p>База данных содержит следующие основные таблицы:</p>
+  <ul>
+    <li><strong>teams</strong> — список зарегистрированных команд (столбцы: <code>id</code> - первичный ключ, <code>name</code> - уникальное название команды).</li>
+    <li><strong>runs</strong> — результаты прохождения (столбцы: <code>id</code> - первичный ключ, <code>team_id</code> - внешний ключ со связью на команду и каскадным удалением, <code>time</code> - строковое представление времени, <code>date</code> - дата забега).</li>
+  </ul>
+
+  <h2>3.2 Спецификация API (Бэкенд)</h2>
+  <p>Сервер Express предоставляет следующие эндпоинты REST API:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Метод</th>
+        <th>Маршрут</th>
+        <th>Описание</th>
+        <th>Тело запроса / Результат</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GET</td>
+        <td>/teams</td>
+        <td>Получить список всех команд</td>
+        <td>JSON-массив всех команд</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/teams</td>
+        <td>Создать новую команду</td>
+        <td><code>{ "name": "Название" }</code></td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/teams/:id</td>
+        <td>Изменить название команды</td>
+        <td><code>{ "name": "Новое название" }</code></td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/teams/:id</td>
+        <td>Удалить команду и связанные забеги</td>
+        <td>JSON-ответ с подтверждением</td>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>/runs</td>
+        <td>Получить список забегов с командами</td>
+        <td>JSON-массив результатов с названиями команд</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>/runs</td>
+        <td>Записать результат забега</td>
+        <td><code>{ "team_id": 1, "time": "01:23:45.67", "date": "2026-05-23" }</code></td>
+      </tr>
+      <tr>
+        <td>PUT</td>
+        <td>/runs/:id</td>
+        <td>Редактировать запись забега</td>
+        <td><code>{ "team_id": 1, "time": "01:20:12.34", "date": "2026-05-23" }</code></td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>/runs/:id</td>
+        <td>Удалить запись забега</td>
+        <td>JSON-ответ с подтверждением</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3.3 Пользовательский интерфейс (Фронтенд)</h2>
+  <p>Фронтенд-приложение разработано на React 18 с использованием TypeScript. Оно взаимодействует с Express-сервером посредством нативных асинхронных вызовов <code>fetch</code>. В приложении реализован SPA-роутинг, позволяющий пользователям бесшовно переключаться между вкладками «Главная», «Команды», «Записи забегов» и «О проекте» без перезагрузки веб-страницы.</p>
+
+  <div class="page-break"></div>
+
+  <h1>4. Разработка и реализация</h1>
+
+  <h2>4.1 Инициализация SQLite Wasm</h2>
+  <p>Реализация инициализации базы данных в файле <code>src/db.js</code> загружает бинарный wasm-файл и монтирует существующий файл данных с диска:</p>
+  <pre>
+async function initDb() {
+  SQL = await initSqlJs({ locateFile: file => `node_modules/sql.js/dist/${file}` });
+  if (fs.existsSync(dbPath)) {
+    const fileBuffer = fs.readFileSync(dbPath);
+    db = new SQL.Database(fileBuffer);
+  } else {
+    db = new SQL.Database();
+    // Создание таблиц...
+  }
+}</pre>
+
+  <h2>4.2 Маршруты Express REST API</h2>
+  <p>Сервер в <code>src/server.js</code> настроен на обслуживание API и отдачу статических файлов скомпилированного фронтенда. Все неразрешенные на уровне бэкенда маршруты перенаправляются на <code>index.html</code> для корректной работы клиентского роутера:</p>
+  <pre>
+app.use(express.static(frontendPath));
+
+app.get('*', (req, res) => {
+  const indexPath = path.join(frontendPath, 'index.html');
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).send('Фронтенд не собран.');
+  }
+});</pre>
+
+  <h2>4.3 Клиентские страницы React</h2>
+  <p>Страницы «Команды» (<code>Teams.tsx</code>) и «Записи забегов» (<code>Runs.tsx</code>) содержат интерактивные формы ввода и таблицы результатов. При операциях добавления или удаления состояние интерфейса обновляется реактивно, обеспечивая высокую скорость отклика приложения.</p>
+
+  <h2>4.4 Премиальная дизайн-система</h2>
+  <p>Стилизация интерфейса выполнена на чистом CSS. Применены эффекты матового стекла (glassmorphism), неоновое свечение элементов, градиентные переливы текста и плавные анимации при наведении курсора. Это создает современный, высокотехнологичный визуальный стиль геймерской панели управления.</p>
+
+  <div class="page-break"></div>
+
+  <h1>5. Тестирование и верификация</h1>
+
+  <h2>5.1 Автоматизированные Jest тесты</h2>
+  <p>В проекте настроена среда Jest для выполнения модульных тестов с полной поддержкой нативных ES-модулей в Node.js. Написаны тесты для базы данных <code>src/db.test.js</code>, проверяющие правильность выполнения операций INSERT, SELECT и каскадных связей.</p>
+  <p>Все тесты базы данных успешно пройдены:</p>
+  <pre>
+PASS src/db.test.js
+  Database Tests
+    √ Should insert and select items (25 ms)
+    √ Should insert and select teams (1 ms)
+    √ Should insert and select runs linked to teams (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total</pre>
+
+  <h2>5.2 Результаты компиляции и сборки</h2>
+  <p>Компиляция React-приложения во фронтенд-дистрибутив завершается без ошибок:</p>
+  <pre>
+vite v7.3.3 building client environment for production...
+✓ 43 modules transformed.
+dist/index.html                   0.54 kB
+dist/assets/index-C1_8WYH4.css    5.37 kB
+dist/assets/index-C-DU43SU.js   196.93 kB
+✓ built in 966ms</pre>
+
+  <h1>6. Развертывание и контейнеризация</h1>
+  <p>Для развертывания проекта создана конфигурация Docker. Использован двухэтапный (multi-stage) процесс сборки для минимизации размера итогового образа. На первом этапе собираются статические файлы React, на втором — поднимается легковесный Node.js сервер, обслуживающий API и фронтенд на едином порту 3000.</p>
+  <p>Запуск контейнера осуществляется одной командой: <code>docker compose up --build</code>.</p>
+
+  <h1>7. Заключение</h1>
+  <p>В рамках кейс-чемпионата <strong>«SpeedrunTeam»</strong> спроектировано и успешно запущено современное веб-приложение <strong>SpeedrunTeam</strong>. В ходе реализации решены все поставленные задачи:</p>
+  <ul>
+    <li>Спроектирована реляционная база данных на Wasm SQLite с поддержкой каскадных ограничений.</li>
+    <li>Разработан масштабируемый REST API на Express с бесшовным SPA-роутингом.</li>
+    <li>Создан потрясающий, технологичный пользовательский интерфейс с эффектом стекла (glassmorphism).</li>
+    <li>Написаны модульные тесты в ESM-среде Jest.</li>
+    <li>Настроен CI/CD пайплайн в GitHub Actions и подготовлена Docker-конфигурация.</li>
+  </ul>
+  <p>Проект полностью готов к промышленной эксплуатации и дальнейшему масштабированию.</p>
+
+</body>
+</html>
