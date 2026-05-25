@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Teams from './pages/Teams';
 import Runs from './pages/Runs';
-
+import Demo from './pages/Demo';
 const App: React.FC = () => {
   return (
     <Router>
@@ -25,6 +25,7 @@ const App: React.FC = () => {
           <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             О проекте
           </NavLink>
+          <NavLink to="/demo" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Демонстрация</NavLink>
         </nav>
       </header>
 
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Route path="/teams" element={<Teams />} />
           <Route path="/runs" element={<Runs />} />
           <Route path="/about" element={<About />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
       </main>
 
